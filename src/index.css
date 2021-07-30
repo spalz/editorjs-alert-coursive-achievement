@@ -1,0 +1,68 @@
+.cdx-alert {
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.cdx-alert__message {
+  outline: none;
+}
+
+.cdx-alert [contentEditable='true'][data-placeholder]::before {
+  position: absolute;
+  content: attr(data-placeholder);
+  color: #ffffff;
+  font-weight: normal;
+  opacity: 0;
+}
+
+.cdx-alert [contentEditable='true'][data-placeholder]:empty::before {
+  opacity: 1;
+}
+
+.cdx-alert [contentEditable='true'][data-placeholder]:empty:focus::before {
+  opacity: 0;
+}
+
+.cdx-alert-cat {
+  background-color: #db95e1;
+}
+.cdx-alert-chil {
+  background-color: #e2daa1;
+  color: #111111;
+}
+.cdx-alert-egg {
+  background-color: #ff8568;
+}
+.cdx-alert-fish {
+  background-color: #8ec8f9;
+}
+.cdx-alert-go {
+  background-color: #c4adff;
+}
+.cdx-alert-izi {
+  background-color: #e2daa1;
+  color: #111111;
+}
+.cdx-alert-wolf {
+  background-color: #bedb7a;
+}
+
+.cdx-alert.cdx-settings-button {
+  margin: 3px;
+  width: 28px;
+  height: 28px;
+  opacity: 0.5;
+}
+
+.cdx-alert.cdx-settings-button:hover {
+  opacity: 1;
+}
+
+.cdx-alert.cdx-settings-button--active,
+.cdx-alert.ce-settings__button--focused {
+  font-weight: bold;
+  opacity: 0.9;
+}
