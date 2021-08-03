@@ -1,5 +1,5 @@
 /**
- * Alert block for the Editor.js.
+ * AlertCursiveAchievement block for the Editor.js.
  *
  * @author Vishal Telangre
  * @license MIT
@@ -16,22 +16,22 @@ require('./index.css').toString();
 import ToolboxIcon from '../assets/icon.svg';
 
 /**
- * @class Alert
- * @classdesc Alert Tool for Editor.js
- * @property {AlertData} data - Alert Tool`s input and output data
+ * @class AlertCursiveAchievement
+ * @classdesc AlertCursiveAchievement Tool for Editor.js
+ * @property {AlertCursiveAchievementData} data - AlertCursiveAchievement Tool`s input and output data
  * @property {object} api - Editor.js API instance
  *
- * @typedef {object} AlertData
- * @description Alert Tool`s input and output data
- * @property {string} type - Alert type
- * @property {string} message - Alert message
+ * @typedef {object} AlertCursiveAchievementData
+ * @description AlertCursiveAchievement Tool`s input and output data
+ * @property {string} type - AlertCursiveAchievement type
+ * @property {string} message - AlertCursiveAchievement message
  *
- * @typedef {object} AlertConfig
- * @description Alert Tool`s initial configuration
- * @property {string} defaultType - default Alert type
- * @property {string} messagePlaceholder - placeholder to show in Alert`s message input
+ * @typedef {object} AlertCursiveAchievementConfig
+ * @description AlertCursiveAchievement Tool`s initial configuration
+ * @property {string} defaultType - default AlertCursiveAchievement type
+ * @property {string} messagePlaceholder - placeholder to show in AlertCursiveAchievement`s message input
  */
-export default class AlertCursiveachievement {
+export default class AlertCursiveAchievement {
   /**
    * Get Toolbox settings
    *
@@ -41,12 +41,12 @@ export default class AlertCursiveachievement {
   static get toolbox() {
     return {
       icon: ToolboxIcon,
-      title: 'Ачивки с персонажами',
+      title: 'AlertCursiveAchievement',
     };
   }
 
   /**
-   * Allow to press Enter inside the Alert block
+   * Allow to press Enter inside the AlertCursiveAchievement block
    * @public
    * @returns {boolean}
    */
@@ -55,7 +55,7 @@ export default class AlertCursiveachievement {
   }
 
   /**
-   * Default Alert type
+   * Default AlertCursiveAchievement type
    *
    * @public
    * @returns {string}
@@ -65,17 +65,17 @@ export default class AlertCursiveachievement {
   }
 
   /**
-   * Default placeholder for Alert message
+   * Default placeholder for AlertCursiveAchievement message
    *
    * @public
    * @returns {string}
    */
   static get DEFAULT_MESSAGE_PLACEHOLDER() {
-    return 'Вставьте текст для ачивки';
+    return 'Type here...';
   }
 
   /**
-   * Supported Alert types
+   * Supported AlertCursiveAchievement types
    *
    * @public
    * @returns {array}
@@ -85,7 +85,7 @@ export default class AlertCursiveachievement {
   }
 
   /**
-   * Alert Tool`s styles
+   * AlertCursiveAchievement Tool`s styles
    *
    * @returns {Object}
    */
@@ -93,8 +93,8 @@ export default class AlertCursiveachievement {
     return {
       settingsButton: this.api.styles.settingsButton,
       settingsButtonActive: this.api.styles.settingsButtonActive,
-      wrapper: 'cdx-alert',
-      wrapperForType: (type) => `cdx-alert-${type}`,
+      wrapper: 'cdx-alert-coursive-achievement',
+      wrapperForType: (type) => `cdx-alert-coursive-achievement-${type}`,
       message: 'cdx-alert__message',
     };
   }
@@ -102,20 +102,22 @@ export default class AlertCursiveachievement {
   /**
    * Render plugin`s main Element and fill it with saved data
    *
-   * @param {AlertData} data — previously saved data
-   * @param {AlertConfig} config — user config for Tool
+   * @param {AlertCursiveAchievementData} data — previously saved data
+   * @param {AlertCursiveAchievementConfig} config — user config for Tool
    * @param {Object} api - Editor.js API
    * @param {boolean} readOnly - read only mode flag
    */
   constructor({ data, config, api, readOnly }) {
     this.api = api;
 
-    this.defaultType = config.defaultType || Alert.DEFAULT_TYPE;
+    this.defaultType =
+      config.defaultType || AlertCursiveAchievement.DEFAULT_TYPE;
     this.messagePlaceholder =
-      config.messagePlaceholder || Alert.DEFAULT_MESSAGE_PLACEHOLDER;
+      config.messagePlaceholder ||
+      AlertCursiveAchievement.DEFAULT_MESSAGE_PLACEHOLDER;
 
     this.data = {
-      type: Alert.ALERT_TYPES.includes(data.type)
+      type: AlertCursiveAchievement.ALERT_TYPES.includes(data.type)
         ? data.type
         : this.defaultType,
       message: data.message || '',
@@ -136,7 +138,7 @@ export default class AlertCursiveachievement {
   }
 
   /**
-   * Create Alert Tool container
+   * Create AlertCursiveAchievement Tool container
    *
    * @returns {Element}
    */
@@ -168,7 +170,7 @@ export default class AlertCursiveachievement {
   renderSettings() {
     const settingsContainer = this._make('div');
 
-    Alert.ALERT_TYPES.forEach((type) => {
+    AlertCursiveAchievement.ALERT_TYPES.forEach((type) => {
       const settingsButton = this._make(
         'div',
         [
@@ -188,7 +190,7 @@ export default class AlertCursiveachievement {
 
       // Set up click handler
       settingsButton.addEventListener('click', () => {
-        this._changeAlertType(type);
+        this._changeAlertCursiveAchievementType(type);
 
         // Un-highlight previous type button
         settingsContainer
@@ -208,33 +210,33 @@ export default class AlertCursiveachievement {
   }
 
   /**
-   * Helper for changing style of Alert block with the selected Alert type
+   * Helper for changing style of AlertCursiveAchievement block with the selected AlertCursiveAchievement type
    *
-   * @param {string} newType - new Alert type to be applied to the block
+   * @param {string} newType - new AlertCursiveAchievement type to be applied to the block
    * @private
    */
-  _changeAlertType(newType) {
+  _changeAlertCursiveAchievementType(newType) {
     // Save new type
     this.data.type = newType;
 
-    Alert.ALERT_TYPES.forEach((type) => {
+    AlertCursiveAchievement.ALERT_TYPES.forEach((type) => {
       const alertClass = this.CSS.wrapperForType(type);
 
-      // Remove the old Alert type class
+      // Remove the old AlertCursiveAchievement type class
       this.container.classList.remove(alertClass);
 
       if (newType === type) {
-        // Add an Alert class for the selected Alert type
+        // Add an AlertCursiveAchievement class for the selected AlertCursiveAchievement type
         this.container.classList.add(alertClass);
       }
     });
   }
 
   /**
-   * Extract Alert data from Alert Tool element
+   * Extract AlertCursiveAchievement data from AlertCursiveAchievement Tool element
    *
    * @param {HTMLDivElement} alertElement - element to save
-   * @returns {AlertData}
+   * @returns {AlertCursiveAchievementData}
    */
   save(alertElement) {
     const messageEl = alertElement.querySelector(`.${this.CSS.message}`);
@@ -268,7 +270,7 @@ export default class AlertCursiveachievement {
   }
 
   /**
-   * Fill Alert's message with the pasted content
+   * Fill AlertCursiveAchievement's message with the pasted content
    *
    * @param {PasteEvent} event - event with pasted content
    */
@@ -282,13 +284,13 @@ export default class AlertCursiveachievement {
   }
 
   /**
-   * Allow Alert to be converted to/from other blocks
+   * Allow AlertCursiveAchievement to be converted to/from other blocks
    */
   static get conversionConfig() {
     return {
-      // export Alert's message for other blocks
+      // export AlertCursiveAchievement's message for other blocks
       export: (data) => data.message,
-      // fill Alert's message from other block's export string
+      // fill AlertCursiveAchievement's message from other block's export string
       import: (string) => {
         return {
           message: string,
@@ -299,7 +301,7 @@ export default class AlertCursiveachievement {
   }
 
   /**
-   * Sanitizer config for Alert Tool saved data
+   * Sanitizer config for AlertCursiveAchievement Tool saved data
    * @returns {Object}
    */
   static get sanitize() {

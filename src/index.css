@@ -1,4 +1,4 @@
-.cdx-alert {
+.cdx-alert-coursive-achievement {
   position: relative;
   padding: 10px;
   border-radius: 8px;
@@ -6,11 +6,12 @@
   color: #ffffff;
 }
 
-.cdx-alert__message {
+.cdx-alert-coursive-achievement__message {
   outline: none;
 }
 
-.cdx-alert [contentEditable='true'][data-placeholder]::before {
+.cdx-alert-coursive-achievement
+  [contentEditable='true'][data-placeholder]::before {
   position: absolute;
   content: attr(data-placeholder);
   color: #ffffff;
@@ -18,51 +19,53 @@
   opacity: 0;
 }
 
-.cdx-alert [contentEditable='true'][data-placeholder]:empty::before {
+.cdx-alert-coursive-achievement
+  [contentEditable='true'][data-placeholder]:empty::before {
   opacity: 1;
 }
 
-.cdx-alert [contentEditable='true'][data-placeholder]:empty:focus::before {
+.cdx-alert-coursive-achievement
+  [contentEditable='true'][data-placeholder]:empty:focus::before {
   opacity: 0;
 }
 
-.cdx-alert-cat {
+.cdx-alert-coursive-achievement-cat {
   background-color: #db95e1;
 }
-.cdx-alert-chil {
+.cdx-alert-coursive-achievement-chil {
   background-color: #e2daa1;
   color: #111111;
 }
-.cdx-alert-egg {
+.cdx-alert-coursive-achievement-egg {
   background-color: #ff8568;
 }
-.cdx-alert-fish {
+.cdx-alert-coursive-achievement-fish {
   background-color: #8ec8f9;
 }
-.cdx-alert-go {
+.cdx-alert-coursive-achievement-go {
   background-color: #c4adff;
 }
-.cdx-alert-izi {
+.cdx-alert-coursive-achievement-izi {
   background-color: #e2daa1;
   color: #111111;
 }
-.cdx-alert-wolf {
+.cdx-alert-coursive-achievement-wolf {
   background-color: #bedb7a;
 }
 
-.cdx-alert.cdx-settings-button {
+.cdx-alert-coursive-achievement.cdx-settings-button {
   margin: 3px;
   width: 28px;
   height: 28px;
   opacity: 0.5;
 }
 
-.cdx-alert.cdx-settings-button:hover {
+.cdx-alert-coursive-achievement.cdx-settings-button:hover {
   opacity: 1;
 }
 
-.cdx-alert.cdx-settings-button--active,
-.cdx-alert.ce-settings__button--focused {
+.cdx-alert-coursive-achievement.cdx-settings-button--active,
+.cdx-alert-coursive-achievement.ce-settings__button--focused {
   font-weight: bold;
   opacity: 0.9;
 }
