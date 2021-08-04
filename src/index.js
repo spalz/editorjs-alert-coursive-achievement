@@ -41,7 +41,7 @@ export default class AlertCursiveAchievement {
   static get toolbox() {
     return {
       icon: ToolboxIcon,
-      title: 'AlertCursiveAchievement',
+      title: 'Ачивки',
     };
   }
 
@@ -61,7 +61,7 @@ export default class AlertCursiveAchievement {
    * @returns {string}
    */
   static get DEFAULT_TYPE() {
-    return 'wolf';
+    return 'cat';
   }
 
   /**
@@ -71,7 +71,7 @@ export default class AlertCursiveAchievement {
    * @returns {string}
    */
   static get DEFAULT_MESSAGE_PLACEHOLDER() {
-    return 'Type here...';
+    return 'Тут текст для ачивки';
   }
 
   /**
@@ -179,7 +179,8 @@ export default class AlertCursiveAchievement {
           this.CSS.wrapperForType(type),
         ],
         {
-          innerHTML: 'A',
+          innerHTML: type,
+          title: type,
         }
       );
 

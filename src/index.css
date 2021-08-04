@@ -32,32 +32,69 @@
 .cdx-alert-coursive-achievement-cat {
   background-color: #db95e1;
 }
+.cdx-alert-coursive-achievement-cat:hover,
+.cdx-alert-coursive-achievement-cat.ce-settings__button--focused,
+.cdx-alert-coursive-achievement-cat:focus {
+  background-color: #db95e1;
+}
 .cdx-alert-coursive-achievement-chil {
+  background-color: #e2daa1;
+  color: #111111;
+}
+.cdx-alert-coursive-achievement-chil:hover,
+.cdx-alert-coursive-achievement-chil.ce-settings__button--focused,
+.cdx-alert-coursive-achievement-chil:focus {
   background-color: #e2daa1;
   color: #111111;
 }
 .cdx-alert-coursive-achievement-egg {
   background-color: #ff8568;
 }
+.cdx-alert-coursive-achievement-egg:hover,
+.cdx-alert-coursive-achievement-egg.ce-settings__button--focused,
+.cdx-alert-coursive-achievement-egg:focus {
+  background-color: #ff8568;
+}
 .cdx-alert-coursive-achievement-fish {
   background-color: #8ec8f9;
 }
+.cdx-alert-coursive-achievement-fish:hover,
+.cdx-alert-coursive-achievement-fish.ce-settings__button--focused,
+.cdx-alert-coursive-achievement-fish:focus {
+  background-color: #8ec8f9;
+}
 .cdx-alert-coursive-achievement-go {
+  background-color: #c4adff;
+}
+.cdx-alert-coursive-achievement-go:hover,
+.cdx-alert-coursive-achievement-go.ce-settings__button--focused,
+.cdx-alert-coursive-achievement-go:focus {
   background-color: #c4adff;
 }
 .cdx-alert-coursive-achievement-izi {
   background-color: #e2daa1;
   color: #111111;
 }
+.cdx-alert-coursive-achievement-izi:hover,
+.cdx-alert-coursive-achievement-izi.ce-settings__button--focused,
+.cdx-alert-coursive-achievement-izi:focus {
+  background-color: #e2daa1;
+  color: #111111;
+}
 .cdx-alert-coursive-achievement-wolf {
+  background-color: #bedb7a;
+}
+.cdx-alert-coursive-achievement-wolf:hover,
+.cdx-alert-coursive-achievement-wolf.ce-settings__button--focused,
+.cdx-alert-coursive-achievement-wolf:focus {
   background-color: #bedb7a;
 }
 
 .cdx-alert-coursive-achievement.cdx-settings-button {
   margin: 3px;
-  width: 28px;
   height: 28px;
-  opacity: 0.5;
+  padding: 0 5px !important;
+  opacity: 0.8;
 }
 
 .cdx-alert-coursive-achievement.cdx-settings-button:hover {
